@@ -5,7 +5,7 @@ function findDigits(n) {
   nArr.forEach((digit) => {
     n % Number(digit) === 0 ? dividers++ : null;
   });
-  console.log(dividers);
+  return dividers;
 }
 
 findDigits(1012); // 3
