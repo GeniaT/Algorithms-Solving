@@ -1,6 +1,4 @@
 Extra long factorials:
-  To retest with the string returned as js is nontyped language.
-Append and delete:
-  check all possible instances, incomplete.
+  Convert exponential format into bigInteger format.
 Cut the sticks:
   improve the run time + check all possible instances.
