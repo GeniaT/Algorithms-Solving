@@ -1,4 +1,2 @@
 Extra long factorials:
   Convert exponential format into bigInteger format.
-Cut the sticks:
-  improve the run time + check all possible instances.

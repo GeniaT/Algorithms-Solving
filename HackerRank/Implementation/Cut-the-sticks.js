@@ -1,26 +1,18 @@
 function cutTheSticks(arr) {
-  arr.sort((a,b) => a - b);
-  let mini = arr[0];
-
-  console.log(arr.length)
-  function oneCut(arr) {
-    arr.forEach((x, index) => {
-      arr[index] -= mini;
-      if (arr[index] < 0) {
-        arr[index] = 0;
-      }
-    });
-    arr.splice(0,arr.lastIndexOf(0) + 1); //arr is modified.
-
-    console.log(arr.length);
-    if (arr.length > 1) {
-      oneCut(arr);
-    }
+  console.log(arr.length);
+  let min = Math.min(...arr);
+  arr = arr.map(x => x - min).filter(x => x !== 0);
+  if (arr.length === 2 && arr[0]===arr[1]) {
+    console.log(2);
+  } else if (arr.length >= 2) {
+    return cutTheSticks(arr);
+  } else if (arr.length === 1){
+    console.log(1);
   }
-    oneCut(arr);
 }
 
-// cutTheSticks([5, 4, 4, 2, 2, 8]); //6 (start nr of sticks) 4 2 1
-cutTheSticks([1, 2, 3, 4, 3, 3, 2, 1]); //8 6 4 1
 
-//improve the run time + check all possibles instances.
+cutTheSticks([5, 4, 4, 2, 2, 8]); //6 (start nr of sticks) 4 2 1
+// cutTheSticks([1, 2, 3, 4, 3, 3, 2, 1]); //8 6 4 1
+// cutTheSticks([8, 8, 14, 10, 3, 5, 14, 12]); // 8 7 6 4 3 2
+// cutTheSticks([1,1,1,1]); // 4
