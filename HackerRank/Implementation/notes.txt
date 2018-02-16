@@ -1,2 +1,0 @@
-Extra long factorials:
-  Convert exponential format into bigInteger format.
