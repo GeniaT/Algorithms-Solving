@@ -1,0 +1,60 @@
+<!doctype html>
+<head>
+  <script src="http://peterolson.github.com/BigInteger.js/BigInteger.min.js"></script>
+</head>
+</body>
+<script>
+//need to remove the ZEROs and in the beginning of the string.
+
+function fibonacciModified(t1, t2, n) {
+  // ti+3 = ti+1 + (ti+2)*(ti+2) , {0,1,1,2,5,27,...}
+  let tMinus1= t1;
+  let tMinus2 = t2;
+  let currentT;
+  let finalResult;
+  if (n <= 9) {
+    for (let i = 3; i <= n; i++) {
+      currentT = tMinus1 + tMinus2*tMinus2;
+      tMinus1 = tMinus2;
+      tMinus2 = currentT;
+    }
+    finalResult = currentT;
+  } else {
+    for (let i = 3; i <= n; i++) {
+      currentT = bigInt(tMinus2).times(tMinus2).plus(tMinus1);
+      tMinus1 = tMinus2;
+      tMinus2 = currentT;
+    }
+    let arr = currentT.value;
+    console.log(currentT);
+    arr.forEach((x, index) => {
+      if (x < 1000000 && x > 99999 && index !== (arr.length-1)) {
+        currentT.value[index] = '0' + currentT.value[index].toString();
+      } else if (x < 100000 && x > 9999 && index !== (arr.length-1)) {
+        currentT.value[index] = '00' + currentT.value[index].toString();
+      } else if (x < 10000 && x > 999 && index !== (arr.length-1)) {
+        currentT.value[index] = '000' + currentT.value[index].toString();
+      } else if (x < 1000 && x > 99 && index !== (arr.length-1)) {
+        console.log('here it is ! ', x);
+        console.log('index', index);
+        currentT.value[index] = '0000' + currentT.value[index].toString();
+      }
+      // else if (x === 0) { //the library writes only one '0' in array when 7 should be written for our join() to work well, see below
+      //   currentT.value[index] = '0000000';
+      // }
+    });
+
+    currentT = currentT.value.reverse(); //bigInt return an array of of numbers of length 7 or less
+    console.log(currentT);
+    finalResult = currentT.join("");
+
+    if (finalResult[0] === '0') { //remove the first 0 so e start with a positive integer
+      finalResult = finalResult.slice(1);
+    }
+  }
+  console.log(finalResult);
+  return finalResult;
+}
+fibonacciModified(1,1,20); //5
+</script>
+</body>

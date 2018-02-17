@@ -1,2 +1,2 @@
-DP - candies:
-  to continue.
+DP - candies: to continue the algo with min and max logic.
+DB - fibonacci modified: continue. 6/10 test cases solved. 
