@@ -12,7 +12,7 @@ function fibonacciModified(t1, t2, n) {
   let tMinus2 = t2;
   let currentT;
   let finalResult;
-  if (n <= 9) {
+  if (n < 9) {
     for (let i = 3; i <= n; i++) {
       currentT = tMinus1 + tMinus2*tMinus2;
       tMinus1 = tMinus2;
@@ -35,9 +35,11 @@ function fibonacciModified(t1, t2, n) {
       } else if (x < 10000 && x > 999 && index !== (arr.length-1)) {
         currentT.value[index] = '000' + currentT.value[index].toString();
       } else if (x < 1000 && x > 99 && index !== (arr.length-1)) {
-        console.log('here it is ! ', x);
-        console.log('index', index);
         currentT.value[index] = '0000' + currentT.value[index].toString();
+      } else if (x < 100 && x > 9 && index !== (arr.length-1)) {
+        currentT.value[index] = '00000' + currentT.value[index].toString();
+      } else if (x < 10 && x > 0 && index !== (arr.length-1)) {
+        currentT.value[index] = '000000' + currentT.value[index].toString();
       }
       // else if (x === 0) { //the library writes only one '0' in array when 7 should be written for our join() to work well, see below
       //   currentT.value[index] = '0000000';
@@ -55,6 +57,6 @@ function fibonacciModified(t1, t2, n) {
   console.log(finalResult);
   return finalResult;
 }
-fibonacciModified(1,1,20); //5
+fibonacciModified(0,2,9); //5
 </script>
 </body>

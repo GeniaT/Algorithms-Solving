@@ -1,2 +1,2 @@
 DP - candies: to continue the algo with min and max logic.
-DB - fibonacci modified: continue. 6/10 test cases solved. 
+Graph Theory - Even tree: Take a pen and play before trying to solve. 
