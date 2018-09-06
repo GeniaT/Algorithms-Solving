@@ -1,2 +1,2 @@
 DP - candies: to continue the algo with min and max logic.
-Graph Theory - Even tree: Take a pen and play before trying to solve. 
+Graph Theory - Even tree: A logic to change: Not only check to cut main branches from root, the cut can be on any lvl of the tree. 
