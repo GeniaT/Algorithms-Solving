@@ -4,3 +4,6 @@ DP - candies: to continue the algo with min and max logic.
 2nd separate commit
 3rd commit that will be squashed
 4th commit that will merge the 3rd
+
+1st commit to change the title for rebase
+2nd commit to change the title for rebase
