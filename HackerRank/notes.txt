@@ -2,3 +2,5 @@ DP - candies: to continue the algo with min and max logic.
 //=> for testing purpose 1/
 1 separate commit
 2nd separate commit
+3rd commit that will be squashed
+4th commit that will merge the 3rd
