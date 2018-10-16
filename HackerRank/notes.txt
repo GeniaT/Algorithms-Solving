@@ -1,9 +1,7 @@
 DP - candies: to continue the algo with min and max logic.
 //=> for testing purpose 1/
-1 separate commit
-2nd separate commit
-3rd commit that will be squashed
-4th commit that will merge the 3rd
 
-1st commit to change the title for rebase
-2nd commit to change the title for rebase
+========
+16/10/18
+for 1st commit of the day
+2nd commit of the day, next step: rebase. 
