@@ -3,5 +3,5 @@ DP - candies: to continue the algo with min and max logic.
 
 ========
 16/10/18
-for 1st commit of the day
-2nd commit of the day, next step: rebase. 
+1st commit
+2nd commit message
